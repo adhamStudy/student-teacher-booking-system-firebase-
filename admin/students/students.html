@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- BEGIN HEAD -->
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta name="description" content="Responsive Admin Template" />
+    <meta name="author" content="RedstarHospital" />
+    <title>Admin Panel</title>
+    <!-- google font -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet" type="text/css" />
+    <!-- icons -->
+    <link href="../../fonts/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../fonts/font-awesome/v6/css/all.css" rel="stylesheet" type="text/css" />
+    <link href="../../fonts/material-design-icons/material-icon.css" rel="stylesheet" type="text/css" />
+    <!--bootstrap -->
+    <link href="../../assets/bundles/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <!-- Material Design Lite CSS -->
+    <!-- <link rel="stylesheet" href="../../../assets/bundles/material/material.min.css"> -->
+    <link rel="stylesheet" href="../../assets/datatables/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="../../css/material_style.css">
+    <!-- Theme Styles -->
+    <link href="../../css/theme_style.css" rel="stylesheet" id="rt_style_components" type="text/css" />
+    <link href="../../css/plugins.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/style.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/responsive.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/theme-color.css" rel="stylesheet" type="text/css" />
+    <!-- favicon -->
+    <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <style type="text/css">
+        table{
+           border-top: 1px solid;
+           margin: 5px !important;
+           border-color: #dee2e6;
+        }
+      
+     
+        </style>
+</head>
+<!-- END HEAD -->
+
+<body
+    class="page-header-fixed sidemenu-closed-hidelogo page-content-white page-md header-white white-sidebar-color logo-indigo">
+    <div class="page-wrapper">
+        <!-- start header -->
+        <div class="page-header navbar navbar-fixed-top">
+            <div class="page-header-inner ">
+                <!-- logo start -->
+                <div class="page-logo">
+                    <a href="#">
+                        <!-- <span class=""><img src="../../img/alogo.png"></span> -->
+                        <span class="logo-default">Unified Mentor</span> </a>
+                </div>
+                <!-- logo end -->
+                <ul class="nav navbar-nav navbar-left in">
+                    <li><a href="#" class="menu-toggler sidebar-toggler"><i data-feather="menu"></i></a></li>
+                </ul>
+           
+                <!-- start mobile menu -->
+                <a class="menu-toggler responsive-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse">
+                    <span></span>
+                </a>
+                <!-- end mobile menu -->
+                <!-- start header menu -->
+                <div class="top-menu">
+                    <ul class="nav navbar-nav pull-right">
+
+
+                        <!-- end message dropdown -->
+                        <!-- start manage user dropdown -->
+                        <li class="dropdown dropdown-user">
+                            <a class="dropdown-toggle" data-bs-toggle="dropdown" data-hover="dropdown"
+                                data-close-others="true">
+                                <img alt="" class="img-circle userImage" src="../../img/dp.jpg" />
+                                <span class="username username-hide-on-mobile userName"> 
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-default">
+                                <li>
+                                    <a href="../edit-profile.html">
+                                        <i class="icon-logout"></i>Edit profile</a>
+                                </li>
+
+                                <li>
+                                    <a  type="button" id="logoutbtn">
+                                        <i class="icon-logout"></i> Log Out </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- end manage user dropdown -->
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="page-container">
+            <!-- start sidebar menu -->
+            <div class="sidebar-container">
+                <div class="sidemenu-container navbar-collapse collapse fixed-menu">
+                    <div id="remove-scroll" class="left-sidemenu">
+                        <ul class="sidemenu  page-header-fixed slimscroll-style" data-keep-expanded="false"
+                            data-auto-scroll="true" data-slide-speed="200" style="padding-top: 20px">
+                            <li class="sidebar-toggler-wrapper hide">
+                                <div class="sidebar-toggler">
+                                    <span></span>
+                                </div>
+                            </li>
+                            <li class="sidebar-user-panel">
+                                <div class="sidebar-user">
+                                    <div class="sidebar-user-picture">
+                                        <img alt="image" class="userImage" src="../../img/dp.jpg">
+                                    </div>
+                                    <div class="sidebar-user-details">
+                                        <div class="user-name userName"></div>
+                                        <div class="user-role" id="Roletext">Administrator</div>
+                                    </div>
+                                </div>
+                            </li>
+
+
+                            <li class="nav-item active open">
+                                <a href="#" class="nav-link nav-toggle"><i data-feather="book"></i>
+                                    <span class="title">Dashboard</span><span class="arrow"></span></a>
+                                <ul class="sub-menu">
+
+                                    <li class="nav-item active open">
+                                        <a href="../dashboard.html" class="nav-link "> <span class="title">Main
+                                                Dashboard</span>
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </li>
+                            <li class="nav-item admin-section">
+                                <a href="#" class="nav-link nav-toggle"><i data-feather="book"></i>
+                                    <span class="title"> Teachers</span><span class="arrow"></span></a>
+                                <ul class="sub-menu">
+
+                                 
+                                    <li class="nav-item">
+                                        <a href="../teachers/teachers.html" class="nav-link "> <span class="title">All
+                                                Teachers
+                                            </span>
+                                        </a>
+                                    </li>
+
+                                   
+                                </ul>
+                            </li>
+                            <li class="nav-item admin-section">
+                                <a href="#" class="nav-link nav-toggle"><i data-feather="book"></i>
+                                    <span class="title"> Students</span><span class="arrow"></span></a>
+                                <ul class="sub-menu">
+
+                                 
+                                    <li class="nav-item">
+                                        <a href="students.html" class="nav-link "> <span class="title">All
+                                            Students
+                                            </span>
+                                        </a>
+                                    </li>
+
+                                   
+                                </ul>
+                            </li>
+                          
+                              <!--------------------------- Student section ---------------------------->
+                              <li class="nav-item student-page">
+                                <a href="#" class="nav-link nav-toggle"><i data-feather="book"></i>
+                                    <span class="title"> Teachers</span><span class="arrow"></span></a>
+                                <ul class="sub-menu">
+
+                                 
+                                    <li class="nav-item">
+                                        <a href="teachers-list.html" class="nav-link "> <span class="title">Search Teachers
+                                            </span>
+                                        </a>
+                                    </li>
+
+                                   
+                                </ul>
+                            </li>
+                           
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- end sidebar menu -->
+            <!-- start page content -->
+            <div class="page-content-wrapper">
+                <div class="page-content">
+                    <div class="page-bar">
+                        <div class="page-title-breadcrumb">
+                            <div class=" pull-left">
+                                <div class="page-title">
+                                    Students List</div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            
+                          <!-- <div class="d-flex justify-content-end">
+                         
+                                  <a type="button" data-bs-toggle="modal" data-bs-target="#smallModel" 
+                                        class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect  btn-circle btn-primary text-right"  style="text-transform: capitalize;    padding: 5px">Add Teacher</a>
+                                       
+                                    </div> -->
+                            <div class="tabbable-line">
+
+                                <div class="tab-content">
+                                    <div class="tab-pane active fontawesome-demo" id="tab1">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="card">
+                                                    <div class="card-head">
+                                                        <header></header>
+                                                        <div class="tools">
+                                                            <a class="fa fa-repeat btn-color box-refresh"
+                                                                href="javascript:;"></a>
+                                                            <a class="t-collapse btn-color fa fa-chevron-down"
+                                                                href="javascript:;"></a>
+                                                            <a class="t-close btn-color fa fa-times"
+                                                                href="javascript:;"></a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-body ">
+
+                                                        <table
+                                                            class="table table-striped table-bordered table-hover table-checkable order-column full-width"
+                                                            id="teacherTable">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th class="center text-center">S.No</th>
+                                                                  
+                                                                    <th class="center text-center"> Name </th>
+                                                                    <th class="center text-center"> Email </th>
+                                                                    <th class="center text-center"> Number </th>
+                                                                    <!-- <th class="center text-center"> Profile </th> -->
+                                                                    <th class="center text-center"> Action </th>
+
+                                                                  
+                                                               
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                         
+
+
+                                                           
+                                                            
+
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <!-- end admited patient list -->
+                </div>
+            </div>
+            <!-- end page content -->
+
+        </div>
+      <!-- start footer -->
+      <div class="page-footer">
+        <div class="page-footer-inner"> 2024 &copy; 
+            <a href="mailto:redstartheme@gmail.com" target="_top" class="makerCss"></a>
+        </div>
+        <div class="scroll-to-top">
+            <i class="icon-arrow-up"></i>
+        </div>
+    </div>
+    <!-- end footer -->
+</div>
+<!-- start js include path -->
+<script src="../../assets/bundles/jquery/jquery.min.js"></script>
+<script src="../../assets/datatables/jquery.dataTables.min.js"></script>
+<script src="../../assets/bundles/popper/popper.js"></script>
+<script src="../../assets/bundles/jquery-blockUI/jquery.blockui.min.js"></script>
+<script src="../../assets/bundles/jquery.slimscroll/jquery.slimscroll.js"></script>
+<script src="../../assets/bundles/feather/feather.min.js"></script>
+<!-- bootstrap -->
+<script src="../../assets/bundles/bootstrap/js/bootstrap.min.js"></script>
+<script src="../../assets/bundles/bootstrap-switch/js/bootstrap-switch.min.js"></script>
+<!-- counterup -->
+<script src="../../assets/bundles/counterup/jquery.waypoints.min.js"></script>
+<script src="../../assets/bundles/counterup/jquery.counterup.min.js"></script>
+<!-- Common js-->
+<script src="../../assets/app.js"></script>
+<script src="../../assets/layout.js"></script>
+<script src="../../assets/theme-color.js"></script>
+<!-- material -->
+<script src="../../assets/bundles/material/material.min.js"></script>
+
+
+
+
+        <div class="modal fade" id="smallModel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <form  id="form_sample_add" class="form-horizontal" method="post " enctype="multipart/form-data">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="exampleModalLabel">Add Teacher
+                    </h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                <div class="form-group row">
+                    <label class="control-label col-md-2"> Name
+                        <span class="required"> * </span>
+                    </label>
+                    <div class="col-md-8">
+                        <input type="text" name="name" data-required="1" placeholder="Enter Name"
+                            class="form-control input-height" required />
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="control-label col-md-2"> Department
+                        <span class="required"> * </span>
+                    </label>
+                    <div class="col-md-8">
+                        <input type="text" name="department" data-required="1" placeholder="Enter Department"
+                            class="form-control input-height" required />
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="control-label col-md-2"> Subject
+                        <span class="required"> * </span>
+                    </label>
+                    <div class="col-md-8">
+                        <input type="text" name="subject" data-required="1" placeholder="Enter Subject"
+                            class="form-control input-height" required />
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="control-label col-md-2"> Email
+                        <span class="required"> * </span>
+                    </label>
+                    <div class="col-md-8">
+                        <input type="email" name="email" data-required="1" placeholder="Enter email"
+                            class="form-control input-height" />
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="control-label col-md-2"> Password
+                        <span class="required"> * <small>(Min - 6)</small></span>
+                    </label>
+                    <div class="col-md-8">
+                        <input type="text" name="password" data-required="1" placeholder="Enter Password"
+                            class="form-control input-height" />
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label class="control-label col-md-2"> Profile Picture </label>
+                    <div class="col-md-8">
+                        <input type="file" name="profilePic" accept="image/*" class="form-control " />
+                    </div>
+                </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                        aria-label="Close">Cancel</button>
+                    <button type="button" class="btn btn-primary" id="save_nav">Save</button>
+                </div>
+            </div>
+            </form>
+        </div>
+    </div>
+        <div class="modal fade" id="smallModel1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <form  id="form_sample_add" class="form-horizontal" method="post " enctype="multipart/form-data">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="exampleModalLabel">Update Teacher
+                    </h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                <div class="form-group row">
+                    <label class="control-label col-md-2"> Name
+                        <span class="required"> * </span>
+                    </label>
+                    <div class="col-md-8">
+                        <input type="text" name="name" data-required="1" placeholder="Enter Name"
+                            class="form-control input-height" />
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="control-label col-md-2"> Department
+                        <span class="required"> * </span>
+                    </label>
+                    <div class="col-md-8">
+                        <input type="text" name="department" data-required="1" placeholder="Enter Department"
+                            class="form-control input-height" />
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="control-label col-md-2"> Subject
+                        <span class="required"> * </span>
+                    </label>
+                    <div class="col-md-8">
+                        <input type="text" name="subject" data-required="1" placeholder="Enter Subject"
+                            class="form-control input-height" />
+                    </div>
+                </div>
+                <!-- <div class="form-group row">
+                    <label class="control-label col-md-2"> Email
+                        <span class="required"> * </span>
+                    </label>
+                    <div class="col-md-8">
+                        <input type="email" name="email" data-required="1" placeholder="Enter email"
+                            class="form-control input-height" />
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="control-label col-md-2"> Password
+                        <span class="required"> * </span>
+                    </label>
+                    <div class="col-md-8">
+                        <input type="text" name="password" data-required="1" placeholder="Enter Password"
+                            class="form-control input-height" />
+                    </div>
+                </div> -->
+              
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                        aria-label="Close">Cancel</button>
+                    <button type="button" class="btn btn-primary" id="update_nav">Update</button>
+                </div>
+            </div>
+            </form>
+        </div>
+    </div>
+<!-- <script>
+      console.log("Test");
+
+</script> -->
+
+<script src="../../config/baseurl.js"></script>
+ <script type = "module" src="../../config/script.js" defer></script>
+ <script>
+//      $('#teacherTable').DataTable({
+
+// });
+ </script>
+<script  type = "module">
+ import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";  
+import { getFirestore, enableIndexedDbPersistence, getDocs, collection , setDoc,getDoc ,deleteDoc,doc,updateDoc ,addDoc,query,where,  } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore.js";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js";
+import { getStorage, ref, uploadBytes, getDownloadURL } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-storage.js";
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+    apiKey: "AIzaSyA1Jx6v0lGPiY060w9-amv0t3UWWI514rM",
+    authDomain: "student-booking-4e659.firebaseapp.com",
+    projectId: "student-booking-4e659",
+    storageBucket: "student-booking-4e659.appspot.com",
+    messagingSenderId: "754306964298",
+    appId: "1:754306964298:web:7a8b9c8570665b2aa5bfb3"
+  };
+
+ // Initialize Firebase
+//  const app = initializeApp(firebaseConfig);
+//  const auth = firebase.auth();
+// const db = firebase.firestore();
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+const auth = getAuth(app); // Add this line to initialize Firebase authentication   
+// ------------------------ teachers--------------------------------------------------------------
+
+document.addEventListener('DOMContentLoaded', function () {
+   // Event listener for the Save button in the modal
+   document.getElementById('save_nav').addEventListener('click', saveData);
+  });
+
+// Define usersCollection at the global level
+const usersCollection = collection(db, 'teachers');
+
+
+  // Function to save data to Firebase
+  async function saveData() {
+    console.log("Save Data");
+    // Get data from modal inputs
+    var name = document.querySelector('#smallModel input[name="name"]').value;
+    var department = document.querySelector('#smallModel input[name="department"]').value;
+    var subject = document.querySelector('#smallModel input[name="subject"]').value;
+    var email = document.querySelector('#smallModel input[name="email"]').value;
+    var password = document.querySelector('#smallModel input[name="password"]').value;
+    var userStatus = '1';
+
+    if (!name || !department || !subject) {
+        alert('Please enter required fields.');
+        return;
+    }
+
+  // Use 'collection' method on 'db' directly
+  var profilePicFile = document.querySelector('#smallModel input[name="profilePic"]').files[0];
+  let profilePicUrl;
+  if(profilePicFile){
+     profilePicUrl = await uploadProfilePic(profilePicFile);
+  }else{
+     profilePicUrl = '';
+  }
+ 
+
+  
+
+  const usersCollection = collection(db, 'teachers');
+            
+            // Use 'setDoc' to set data for the document
+ const docRef =  await addDoc(usersCollection, {
+      name: name,
+      department: department,
+      subject: subject,
+      profilepic: profilePicUrl,
+      email:email,
+      password:password
+    })
+    // Retrieve the ID of the newly created document
+   const teacherId = docRef.id;
+ 
+
+    //save user details to user table
+    createUserWithEmailAndPassword(auth, email, password)
+        .then(async (userCredential) => {
+            const user = userCredential.user;
+
+            // Use 'collection' method on 'db' directly
+            const usersCollection1 = collection(db, 'users');
+            
+            // Use 'setDoc' to set data for the document
+            await setDoc(doc(usersCollection1, user.uid), {
+                email: user.email,
+                name:name,
+                //mobileNumber: mobileNumber,
+                userStatus: parseInt(userStatus),
+                userId:teacherId
+            });
+
+           
+        })
+    //save user details to user table
+  
+    .then(function(docRef) {
+
+      // Close modal using plain JavaScript
+        var modal = document.getElementById('smallModel');
+        modal.classList.remove('show');
+        modal.style.display = 'none';
+        document.body.classList.remove('modal-open');
+        document.getElementsByClassName('modal-backdrop')[0].remove();
+
+        alert("Data Added successfully")
+     
+      // Refresh the table
+      displayData();
+
+    })
+    .catch(function(error) {
+      console.error("Error adding document: ", error);
+    });
+  }
+// Example function to upload a profile picture to Firebase Storage
+async function uploadProfilePic(file) {
+    try {
+        const storageRef = ref(getStorage(), 'profile-pics/' + file.name);
+        const snapshot = await uploadBytes(storageRef, file);
+
+        console.log('Profile picture uploaded successfully');
+        
+        // Get the download URL for the uploaded image
+        const downloadURL = await getDownloadURL(snapshot.ref);
+
+        return downloadURL;
+    } catch (error) {
+        console.error("Error uploading profile picture:", error);
+        throw error;
+    }
+}
+// Example function to upload a profile picture to Firebase Storage
+//new---- Update -------------------------
+async function updateDocument(documentId) {
+  try {
+    // Fetch the existing data of the selected teacher from Firestore
+    const docRef = doc(db, "students", documentId);
+    const docSnap = await getDoc(docRef);
+
+    if (docSnap.exists()) {
+      const existingData = docSnap.data();
+
+      // Populate the modal fields with existing data
+      document.querySelector('#smallModel1 input[name="name"]').value = existingData.name;
+      document.querySelector('#smallModel1 input[name="department"]').value = existingData.department;
+      document.querySelector('#smallModel1 input[name="subject"]').value = existingData.subject;
+
+      // Open the modal
+     // $('#smallModel1').modal('show');
+
+      // Event listener for the Update button in the modal
+      //document.getElementById('update_nav').addEventListener('click', async function () {
+        // Get updated data from modal inputs
+        const updatedName = document.querySelector('#smallModel1 input[name="name"]').value;
+        const updatedDepartment = document.querySelector('#smallModel1 input[name="department"]').value;
+        const updatedSubject = document.querySelector('#smallModel1 input[name="subject"]').value;
+
+        // Update data in Firestore
+        await updateDoc(docRef, {
+        //   name: updatedName,
+        //   department: updatedDepartment,
+        //   subject: updatedSubject
+        approvestatus:1
+        });
+
+        // console.log("Document updated successfully!");
+
+      
+         // Close modal using plain JavaScript
+        //  var modal = document.getElementById('smallModel1');
+        // modal.classList.remove('show');
+        // modal.style.display = 'none';
+        // document.body.classList.remove('modal-open');
+        // document.getElementsByClassName('modal-backdrop')[0].remove();
+
+        alert("Data updated successfully")
+
+        // Refresh the table
+        displayData();
+     // });
+    }
+  } catch (error) {
+    console.error("Error updating document:", error);
+  }
+}
+//new----
+
+async function displayData() {
+  var tableBody = document.getElementById('teacherTable').querySelector('tbody');
+
+  // Clear existing table rows
+  tableBody.innerHTML = '';
+
+  try {
+ 
+     const querySnapshot = await getDocs(collection(db, 'students'));
+   
+    var dataArray = querySnapshot.docs; 
+// Iterate over the array
+dataArray.forEach((doc, index) => {
+
+   // querySnapshot.forEach((doc, index) => {
+      var data = doc.data();
+      //console.log("Index:", index); // Log the index to check its value
+      // Create a new row for each document
+      var row = tableBody.insertRow();
+      var cell1 = row.insertCell(0);
+      var cell2 = row.insertCell(1);
+      var cell3 = row.insertCell(2);
+      var cell4 = row.insertCell(3);
+      var cell5 = row.insertCell(4);
+      //var cell6 = row.insertCell(5);
+
+      // Populate the row with data
+      cell1.textContent =  index + 1;
+      cell2.textContent = data.name;
+      cell3.textContent = data.email;
+      cell4.textContent = data.mobileNumber;
+      //profile-pic
+    //   const img = new Image();
+    //     img.src = data.profilepic;
+    //     img.width = 100;
+    //     img.height = 100;
+    //     img.alt = 'Example Image';
+    //     cell5.appendChild(img);
+      //profile-pic
+
+      // Add buttons for update and delete actions
+   
+        var updateButton = document.createElement('button');
+      updateButton.textContent = 'Approve';
+      updateButton.classList.add('btn', 'btn-primary'); // Add your button classes
+      updateButton.addEventListener('click', function () {
+      // Call the updateDocument function when the update button is clicked
+        updateDocument(doc.id);
+      });
+    
+
+
+      var deleteButton = document.createElement('button');
+      deleteButton.textContent = 'Delete';
+      deleteButton.classList.add('btn', 'btn-danger'); // Add your button classes
+      deleteButton.addEventListener('click', async function () {
+     // Get the document ID
+     var documentId = doc.id;
+   // Delete teacher from Firestore
+        //  app.firestore().collection('teachers').doc(documentId).delete()
+
+        deleteDocument(documentId)
+
+   // console.log("Data deleted successfully!")
+  .then(() => {
+    console.log("Deleted successfully");
+    // You can handle success as needed
+  })
+  .catch((error) => {
+    console.error("Error deleting teacher: ", error);
+    alert("Error deleting . Please try again.");
+  });
+
+      });
+      if(data.approvestatus == 0 || !data.approvestatus){
+
+      cell5.appendChild(updateButton);
+      }
+      cell5.appendChild(deleteButton);
+    });
+
+    // Initialize DataTable after displaying data
+  $('#teacherTable').DataTable();
+  } catch (error) {
+    console.error("Error fetching data: ", error);
+  }
+}
+async function deleteDocument(documentId) {
+  try {
+    const docRef = doc(db, "students", documentId);
+     console.log(documentId);
+    await deleteDoc(docRef);
+
+    
+
+   //userId
+   const usersCollectionRef = collection(db, "users");
+    const q = query(usersCollectionRef, where("userId", "==", documentId));
+    const querySnapshot = await getDocs(q);
+
+    // Loop through the documents that match the query
+    querySnapshot.forEach((doc1) => {
+    const userDocRef = doc(db, "users", doc1.id);
+    // Delete document from 'users' collection
+    deleteDoc(userDocRef);
+    })
+
+    console.log("Document deleted successfully!");
+    alert("Data deleted successfully!")
+    displayData();
+
+  } catch (error) {
+    console.error("Error deleting document:", error);
+  }
+}
+
+
+
+  // Display data on page load
+  displayData();
+
+
+// ------------------------ teachers--------------------------------------------------------------
+</script>
+</body>
+
+</html>
