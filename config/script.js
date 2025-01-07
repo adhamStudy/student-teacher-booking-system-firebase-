@@ -7,7 +7,7 @@ import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } f
  //2312
 //  const firebaseConfig = {
 //    apiKey: "AIzaSyChoQrcyahRHfQ7fI8OlNglB_EjfwSjeNc",
-//    authDomain: "student-booking-9e07b.firebaseapp.com",
+//    authDomain: "student-booking-9e07b.firebaseapp.com",`
 //    projectId: "student-booking-9e07b",
 //    storageBucket: "student-booking-9e07b.appspot.com",
 //    messagingSenderId: "64974206848",
@@ -16,12 +16,12 @@ import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } f
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyA1Jx6v0lGPiY060w9-amv0t3UWWI514rM",
-    authDomain: "student-booking-4e659.firebaseapp.com",
-    projectId: "student-booking-4e659",
-    storageBucket: "student-booking-4e659.appspot.com",
-    messagingSenderId: "754306964298",
-    appId: "1:754306964298:web:7a8b9c8570665b2aa5bfb3"
+    apiKey: "AIzaSyAKJycpSG5tf9CM50FpPdGilSfd8xmrSeI",
+    authDomain: "stba-98d76.firebaseapp.com",
+    projectId: "stba-98d76",
+    storageBucket: "stba-98d76.appspot.com",
+    messagingSenderId: "260426272929",
+    appId: "1:260426272929:web:3bbc24923ba03bd3f6a0e0"
   };
 
  // Initialize Firebase
